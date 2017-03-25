@@ -13,7 +13,7 @@
 }
 .header-inicio{
 	width: 100%;
-	padding: 20px;
+	padding-top: 20px;
 	float: left;
 }
 	.header-inicio h1{
@@ -103,3 +103,162 @@ button{
 		text-decoration: none;
 	}
 
+
+/*============registro*/
+input[type="radio"]{
+	display: none;
+}
+label{
+	width: 70%;
+	height: 25px;
+	margin-left: 15%;
+	float: left;
+	line-height: 25px;
+	position: relative;
+	text-align: center;
+	font-size: 1.1em;
+	color: rgba(0,0,0,.7);
+	font-size: 500;
+	border: 2px solid rgba(255,255,255,.7);
+	padding: 3px;
+	border-radius: 30px;
+}
+	label>img{
+		height: 22px;
+		filter: invert(100%);
+	}
+	.radioseleccionado{
+		background: #F4898C;
+	}
+
+/*===========MAIN========*/
+.cont{
+	height: calc(100% - 70px);
+	float: left;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	overflow-y: scroll;
+	padding-bottom: 40px;
+}
+	.cont>h1{
+		text-align:center;
+		font-weight: 300;
+		font-size: 1.4em;
+		height: 40px;
+		line-height: 40px;
+		color: #505a8d;
+	}
+.usuario{
+	height: 100%;
+	float: left;
+	width: 100%;
+}
+	.header-usuario{
+		float: left;
+		width: 100%;
+		height: 100px;
+		box-shadow: inset 0px -5px 20px 0px rgba(0,0,0,.4);
+		background-image: url(../img/encabezado.jpg); 
+		background-size: cover; 
+		background-repeat: no-repeat;
+	}
+	.img-usuario{
+		float: left;
+		width:100px;
+		height: 100px;
+		margin-top: -50px;
+		margin-left: calc(50% - 50px);
+		border-radius: 50%;
+		overflow: hidden;
+		background: -webkit-linear-gradient(45deg,#30ECB1,#0098d1);
+		padding: 2px;
+		text-align: center;
+		color: white;
+		font-size: 1em;
+	}
+	.img-usuario>img{
+			max-width: 100%;
+			border-radius: 50%;
+		}
+
+	.nombre-usuario{
+		float: left;
+		width: 100%;
+		text-align: center;
+		font-size: .7em;
+		margin-top: 10px;
+		color: #505a8d;
+		height: 30px;
+	}
+
+	.nombre-usuario>h1{
+		font-weight: 300;
+		margin-bottom: 5px;
+	}
+
+/*========Menu============*/
+.menu{
+	background:-webkit-linear-gradient(left, #30ECB1, #0098d1);
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	/*background: red;*/
+}
+	.tab{
+		float: left;
+		width: 25%;
+		text-align: center;
+		height: 100%;
+	}
+
+		.tab>p{
+			font-size: .8em;
+			text-align: center;
+			font-weight: 600;
+			color: rgba(255,255,255,.9);
+			border-top: 1px solid #fff;
+			float: left;
+			width: 90%;
+			margin-left: 5%;
+			padding-top: 5px;
+			opacity: .5;
+		}
+		.tab>img{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			opacity: .8;
+			filter: invert(100%);
+		}
+
+
+.tab-activo{
+	background: rgba(0,0,0,.1) !important;
+}
+
+.tab-activo>p{
+	border-top: 1px solid #ad8aee;
+	color: #78f8f1;
+	opacity: 1;
+}
+
+.tab-activo>img{
+	opacity: 1;
+}
+
+
+/*===============Actividades=====================*/
+.actividades{
+	width: 90%;
+	height: 90px;
+	background: yellow;
+	float: left;
+	margin-left: 5%;
+	margin-top: 10px;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0px 8px 4px -4px rgba(0,0,0,.2);
+	opacity: .9;
+}
