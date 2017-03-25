@@ -1,0 +1,21 @@
+{% include 'up.html' %}
+<body style="overflow: hidden; background-image: url(img/Aguainicio.gif)">
+	<div class="contenedor">
+		<div class="header-inicio">
+			<h1>Iniciar Sesión</h1>
+		</div>
+			<div class="formulario">
+				{% csrf_token %}
+				<div class="entrada">
+					<input type="text" placeholder="Correo" id="email">
+				</div>
+				<div class="entrada">
+					<input type="password" placeholder="Contraseña" id="password">
+				</div>
+				<div class="salto"></div>
+				<button id="btn_login">Iniciar Sesión</button>
+				<div class="enlace"><a href="{% url 'registro_view'' %}">Si aún no estas registrado da click aquí</a></div>
+			</div>
+	</div>
+</body>
+</html>

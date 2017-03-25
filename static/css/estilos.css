@@ -1,0 +1,105 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+.contenedor{
+	width: 100%;
+	position: fixed;
+	float: left;
+	overflow: scroll;
+	height: 100%;
+	background: -webkit-linear-gradient(rgba(21,228,143,.8),rgba(116,197,200,8));
+}
+.header-inicio{
+	width: 100%;
+	padding: 20px;
+	float: left;
+}
+	.header-inicio h1{
+		text-align: center;
+		width: 100%;
+		font-size: 1.8em;
+		font-weight: 100;
+		color: #F8F8F8;
+		margin-top: 30px;
+	}
+
+.formulario{
+	width: 100%;
+	float: left;
+	padding-top: 5px;
+}
+	.entrada{
+		width: 90%;
+		padding: 2px 20px;
+		box-sizing: border-box;
+		float: left;
+		margin-left: 5%;
+		margin-top: 5%;
+	}
+	.entrada input{
+		width: 100%;
+		float: left;
+		height: 35px;
+		font-size: 1em;
+		padding-left: 10px;
+		box-sizing: border-box;
+		border-radius: 4px;
+		border: none;
+		background: rgba(255,255,255,.2);
+		font-weight: 400;
+		outline: none;
+		color: #FFF;
+	}
+	::-webkit-input-placeholder{
+		color: #fefefe;
+	}
+	.entrada input:focus{
+		box-shadow: 0px 0px 2px 1px #7AFEFF;
+	}
+	.error{
+		border:1px solid #ff5d58 !important;
+	}
+.salto{
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: relative;
+}
+button{
+	float: left;
+	position: relative;
+	width: 50%;
+	height: 40px;
+	background:-webkit-linear-gradient(left,  #9D50BB,  #6E48AA);
+	border: 2px solid rgba(0,0,0,.2);
+	color: #fff;
+	font-size: 1em;
+	border-radius: 20px;
+	margin-top: 30px;
+	margin-left: 25%;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+}
+.enlace{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+	.enlace>a{
+		clear: both;
+		color: #fff;
+		font-size: 1em;
+		width: 70%;
+		float: left;
+		margin-left: 15%;
+		margin-top: 15px;
+		font-weight: 100;
+		text-decoration: none;
+	}
+
