@@ -1,0 +1,55 @@
+{% include 'up.html' %}
+{% load staticfiles %}
+<body style="overflow: hidden; overflow: none; background-image: url(static/img/Aguainicio.gif);">
+
+	<div class="contenedor">
+	<div class="header-inicio">
+		<h1>Regístrate</h1>
+	</div>
+		<div class="formulario">
+			{% csrf_token %}
+			<div class="entrada">
+				<input type="text" placeholder="Nombre" id="name">
+			</div>
+			<div class="entrada">
+				<input type="password" placeholder="Contraseña" id="password">
+			</div>
+			<div class="entrada">
+				<input type="password" placeholder="Confirmar Contraseña" id="password_confirm">
+			</div>
+			<div class="entrada">
+				<input type="email" placeholder="Correo" id="email">
+			</div>
+			<div class="entrada">
+				<label for="ahorrador" id="ah">
+					<img src="{% static 'img/escusado.png' %}">
+					<input type="radio" name="tipoexcusado" onclick="check_rabutton(this);" id="ahorrador">Ahorrador
+				</label>
+			</div>
+
+			<div class="entrada">
+				<label for="noahorrador" id="noh">
+					<img src="{% static 'img/escusado.png' %}">
+					<input type="radio" name="tipoexcusado" onclick="check_rabutton(this);" id="noahorrador">No ahorrador
+				</label>
+			</div>
+
+			<div class="entrada">
+				<label for="regadera" id="re">
+					<img src="{% static 'img/regadera.png' %}">
+					<input type="radio" name="tipobano" onclick="check_rabutton(this);" id="regadera">Regadera
+				</label>
+			</div>
+
+			<div class="entrada">
+				<label for="banera" id="ba">
+					<img src="{% static 'img/banera.png' %}">
+					<input type="radio" name="tipobano" onclick="check_rabutton(this);"  id="banera">Bañera
+				</label>
+			</div>
+		</div>
+		<button type="button" name="button" id="btn_registro">Enviar</button>
+	</div>
+
+</body>
+</html>

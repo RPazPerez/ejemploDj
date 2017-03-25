@@ -1,0 +1,87 @@
+{% include 'up.html' %}
+<body style="overflow: hidden;">
+
+	<div class="cont">
+		<div class="usuario">
+			<div class="header-usuario"></div>
+			<div class="img-usuario">
+				<img src="{% '' %}">
+				<label for="imagenN">
+					<input type="file" accept="image/jpg" name="fileToUpload" id="imagenN">
+				</label>
+			</div>
+			<div class="nombre-usuario">
+				<h1>Julieta Serrano Zapatero</h1>
+			</div>
+
+
+
+			<div class="linea"></div>
+			<div class="stats-usuario" style="height: calc(100% - 300px)">
+				<h2>Tipo de Baño</h2>
+				<table>
+					<tr>
+						<td>
+							<label for="ahorrador" style="border: 2px solid rgba(48,236,177,.8) !important; color: rgba(0,0,0,.8) !important;>
+								<input type="radio" name="tipoexcusado" id="ahorrador">Ahorrador
+							</label>
+						</td>
+						<td>
+							<label for="noahorrador" style="border: 2px solid rgba(48,236,177,.8) !important; color: rgba(0,0,0,.8) !important;>
+								<input type="radio" name="tipoexcusado" id="noahorrador">No Ahorrador
+							</label>
+						</td>
+					</tr>
+
+				</table>
+
+					<h2>Cambiar Regadera/tina</h2>
+
+					<table>
+
+					<tr>
+						<td>
+							<label for="regadera" style="border: 2px solid rgba(48,236,177,.8) !important; color: rgba(0,0,0,.8) !important;">
+								<input type="radio" name="tipobano" id="regadera">Regadera
+							</label>
+						</td>
+						<td>
+							<label for="bañera" style="border: 2px solid rgba(48,236,177,.8) !important; color: rgba(0,0,0,.8) !important;">
+								<input type="radio" name="tipobano" id="bañera">Bañera
+							</label>
+						</td>
+					</tr>
+
+				</table>
+
+				<input type="submit" value="Guardar Cambios" onclick="cambiarPass()">
+
+				<button class="boton" onclick="cerrarSesion()">CERRAR SESIÓN</button>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="menu">
+		<a href="grupo.html"><div class="tab">
+			<img src="{% 'img/grupo.png' %}">
+			<p>Grupos</p>
+		</div></a>
+
+		<a href="actividades.html"><div class="tab">
+			<img src="{% 'img/regadera2.png' %}">
+			<p>Actividades</p>
+		</div>
+		</a>
+
+		<a href="{% url 'profile_view' %}"><div class="tab tab-activo">
+			<img src="{% 'img/perfil.png' %}">
+			<p>Perfil</p>
+		</div>
+		</a>
+	</div>
+
+</body>
+</html>
