@@ -2,42 +2,31 @@
 * function login
 */
 $(function(){$("#btn_login").click(function(){
-    var email = $("#email").val();
+    var user = $("#user").val();
     var password = $("#password").val();
-    var token = $("#token").val();
-    if(email == ""){
-      $("#email").addClass('error');
+    var token = $("input[name='csrfmiddlewaretoken']").val();
+    if(user == ""){
+      $("#user").addClass('error');
     }else{
-      $("#email").removeClass('error');
+      $("#user").removeClass('error');
     }
     if(password == ""){
       $("#password").addClass('error');
     }else{
       $("#password").removeClass('error');
     }
-    if(email != "" && password != ""){
+    if(user != "" && password != ""){
       $.ajax({
-        url: '/login',
-        headers: {'X-CSRF-TOKEN': token},
+        url: 'login/autentificar',
         type: 'POST',
-        dataType: 'json',
-        data:{email:email, password:password},
+        data:{user:user, password:password, csrfmiddlewaretoken: token},
         success: function(data){
-          alert("Entro");
-          console.log(data);
-          if(data.mensaje == ""){
-            window.location = "login";
+          if(data.mensaje == "Acceso"){
+            window.location = "index";
+          }else{
+            alert("Usuario o Contraseña Incorrectos");
           }
         },
-        error: function(data){
-          alert("error");
-          console.log(data);
-          // var errores = data.responseJSON;
-          // $.each( errores, function( key, val ) {
-          //     erroresAux = erroresAux+"@"+val;
-          // });
-          // self.errores(erroresAux);
-        }
       });
     }
   });
